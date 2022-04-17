@@ -89,7 +89,7 @@ body {
 }
 
 /*Tablet*/
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 900px){
     #title_text {
         font-size: 48px;
     }
@@ -106,5 +106,35 @@ body {
     #big_box {
         padding: 30px;
         padding-bottom: 50px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 901px){
+    #title_text {
+        font-size: 48px;
+        margin-left: auto;
+        padding-left: 140px;
+        margin-right: auto;
+    }
+    #my_videos{
+        margin-left: 0%;
+    }
+    #submit_video {
+        font-size: 24px;
+    }
+    .button {
+        height: 60px;
+        width: 140px;
+    }
+    .button_text {
+        font-size: 20px;
+    }
+    #big_box {
+        padding: 30px;
+        padding-bottom: 50px;
+    }
+    #hori_title{
+        max-width: 1512px;
     }
 }

@@ -3,6 +3,7 @@
 
 // include express
 const express = require("express");
+const bodyParser = require('body-parser');
 // create object to interface with express
 const app = express();
 
@@ -21,6 +22,14 @@ app.use(express.static("public"));
 // if no file specified, return the main page
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/public/tiktokpets.html");
+});
+
+app.use(bodyParser.text());
+
+app.post("/videoData", function(req, res, next) {
+    let text = req.body;
+    console.log("Received\n" + text);
+    res.send("got POST.");
 });
 
 // Need to add response if page not found!
