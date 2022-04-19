@@ -29,7 +29,8 @@ app.use(bodyParser.text());
 app.post("/videoData", function(req, res, next) {
     let text = req.body;
     console.log("Received\n" + text);
-    res.send("got POST.");
+    text = text.split("\n");
+    res.send(text[2]);
 });
 
 // Need to add response if page not found!
