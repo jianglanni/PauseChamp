@@ -29,8 +29,9 @@ app.use(bodyParser.text());
 app.post("/videoData", function(req, res, next) {
     let text = req.body;
     console.log("Received\n" + text);
-    text = text.split("\n");
-    res.send(text[2]);
+    // text = text.split("\n");
+    // res.send(text[2]);  //send gotten nickname back.
+    res.send("got POST <3");
 });
 
 // Need to add response if page not found!

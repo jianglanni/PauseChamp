@@ -24,7 +24,7 @@ function trigger() {
     sendPostRequest("/videoData", username_box + '\n' + url_box + '\n' +nickname_box).then(function (data) {
     console.log("got back the following string");
     console.log(data); 
-    sessionStorage.setItem("nick", data);
+    sessionStorage.setItem("nick", nickname_box);
     window.location = "/result.html";
   })
   .catch(function (error) {
